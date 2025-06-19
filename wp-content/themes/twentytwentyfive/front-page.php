@@ -160,24 +160,24 @@
                     exit;
                 }
 
-                $mysqli = new mysqli('localhost', 'root', '', 'bd_gestion');
-                if ($mysqli->connect_errno) {
-                    echo "Error de conexión a la base de datos: " . $mysqli->connect_error;
+                $conexion = conexionBD();
+                if ($conexion->connect_errno) {
+                    echo "Error de conexión a la base de datos: " . $conexion->connect_error;
                     exit;
                 }
 
-                if ($mysqli->multi_query($sqlContent)) {
+                if ($conexion->multi_query($sqlContent)) {
                     do {
-                        if ($result = $mysqli->store_result()) {
+                        if ($result = $conexion->store_result()) {
                             $result->free();
                         }
-                    } while ($mysqli->more_results() && $mysqli->next_result());
+                    } while ($conexion->more_results() && $conexion->next_result());
                     echo "Restauración completada correctamente.";
                 } else {
-                    echo "Error en la restauración: " . $mysqli->error;
+                    echo "Error en la restauración: " . $conexion->error;
                 }
 
-                $mysqli->close();
+                $conexion->close();
             } else {
                 echo "Error al subir el archivo SQL.";
             }
