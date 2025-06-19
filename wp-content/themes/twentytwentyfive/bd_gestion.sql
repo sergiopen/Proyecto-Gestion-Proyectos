@@ -1,5 +1,5 @@
 -- Backup database: bd_gestion
--- Fecha: 2025-06-19 16:27:01
+-- Fecha: 2025-06-19 16:52:01
 
 DROP TABLE IF EXISTS `profesores`;
 CREATE TABLE `profesores` (
@@ -12,7 +12,7 @@ CREATE TABLE `profesores` (
   `rol` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_nombre_usuario` (`nombre_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `profesores` VALUES('11', 'asdjasldasjds@gmail.com', '$2y$10$77VlVbuomojwUZkfW7DnLOYcHxQ3qc62gu1M2r4DaKVJWZZqI66uW', 'david', 'holaholahoalhola', 'asdas1212312321312', 'admin');
 INSERT INTO `profesores` VALUES('14', 'spensob0410@g.educaand.es', '$2y$10$/BwMWEgnR4tFiFLMj/Jy6.2vbYHEjJoYdkeuDC/mR/9afuORxN9oG', 'sergio', 'Sergio', 'Peña Sobrado', 'admin');
@@ -21,6 +21,7 @@ INSERT INTO `profesores` VALUES('16', 'juan.perez@example.com', '', 'juanperez',
 INSERT INTO `profesores` VALUES('18', 'jose.martin@example.com', '', 'josemartin', 'José', 'Martín', 'admin');
 INSERT INTO `profesores` VALUES('19', 'luis.rodriguez@example.com', '', 'luisrodriguez', 'Luis', 'Rodríguez', 'estandar');
 INSERT INTO `profesores` VALUES('39', 'juancarlos@gmail.com', '$2y$10$vZhKgFBxSyDfObINcTYsaunzSPIp0II/.fwhgvcruU3c0hyUuQtSi', 'juancarlos', 'Juan carlos I', 'Juan Carlos', 'admin');
+INSERT INTO `profesores` VALUES('40', 'admin@gmail.com', '$2y$10$0ZLiUEqqMC3cDlR/MyuAlO3cqvH.22IlhsY03xOr/EB0i3B4Lumla', 'admin', 'admin', 'admin', 'admin');
 
 
 DROP TABLE IF EXISTS `proyectos`;
@@ -36,7 +37,7 @@ CREATE TABLE `proyectos` (
   `profesores` text DEFAULT NULL,
   `creado_en` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `proyectos` VALUES('1', 'Cambiando titulo de nuasdasdvo', 'Ana sadasds', 'ana.lopeasdasdz@example.com', '2024-11-14', 'asdasd, gestión, escolar', 'Aplicación web asdgestionar estudiantes, profesores y notas.', 'gestion_escolar.zip', 'Luis García, asdasdFernández', '2025-06-13 12:34:27');
 INSERT INTO `proyectos` VALUES('6', 'Proyecto de IA', 'Ana López', 'ana.lopez@example.com', '2024-12-01', 'IA, Machine Learning', 'Proyecto para detectar imágenes con IA.', 'ia_proyecto.zip', 'Carlos Pérez', '2025-06-13 13:13:52');
@@ -48,5 +49,6 @@ INSERT INTO `proyectos` VALUES('11', 'Prueba proyecto', 'Juan Luque', 'prueba@gm
 INSERT INTO `proyectos` VALUES('12', 'Proyecto final', 'Proyecto final', 'proyectofinal@gmail.com', '2025-06-20', 'PHP, JS, HTML', 'Proyecto final', 'proj_684c0acce6417.zip', 'Juan Pérez', '2025-06-13 13:22:41');
 INSERT INTO `proyectos` VALUES('13', 'JASKLDJASLKDJ', 'KLJASKLDJASKLDJ', 'SLKdjaskld@gmail.com', '2025-06-20', 'PHP, MYSQL', 'Prueba', 'proj_684c0b15cbc61.zip', 'Prueba', '2025-06-13 13:26:56');
 INSERT INTO `proyectos` VALUES('14', 'jkasldasjdklasj', 'asjdaskldjaskld', 'askldjaskld2@gmail.com', '2025-06-13', 'PHP', 'asdasdas', 'proj_684c0b2d4a46e2.44173110.zip', 'asdasd', '2025-06-13 13:27:41');
+INSERT INTO `proyectos` VALUES('15', 'Prueba de proyecto', 'Juan Ramon', 'juanramon@gmail.com', '2025-06-20', 'PHP, Javascript', 'Juan Ramon', 'proj_68541f054045e3.50283580.zip', 'Juan Quintero', '2025-06-19 16:30:29');
 
 
